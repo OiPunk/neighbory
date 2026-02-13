@@ -3,8 +3,8 @@
 ## 最终采用
 
 - 产品名：`Neighbory`
-- 建议仓库名：`springboot-neighbory`
-- Maven 工程名：`springboot-neighbory`
+- 建议仓库名：`neighbory`
+- Maven 工程名：`neighbory`
 
 ## 备选名字（10个）
 
@@ -22,5 +22,5 @@
 ## 命名原则
 
 - 产品名偏品牌化，便于传播与记忆
-- 仓库名显式包含 `springboot`，便于技术检索
+- 仓库名与产品名保持一致，降低认知成本
 - 兼顾学习项目定位与未来扩展为真实产品的可能性

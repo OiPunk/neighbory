@@ -1,6 +1,6 @@
-# SpringBoot Neighbory - Repo Introduce
+# Neighbory - Repo Introduce
 
-`SpringBoot Neighbory` 是一个面向 Spring Boot 新手的社区物业管理学习项目。  
+`Neighbory` 是一个面向 Spring Boot 新手的社区物业管理学习项目。  
 目标是让你在一个可运行、可测试、可扩展的代码库中，系统掌握 Spring Boot 3.5 的现代开发方式。
 
 ## 项目定位

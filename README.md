@@ -1,4 +1,4 @@
-# SpringBoot Neighbory
+# Neighbory
 
 `Neighbory` 是一个基于 Spring Boot 的社区物业学习型项目，目标是给不会 Spring Boot 的新手提供一条可运行、可理解、可扩展的学习路径。
 
@@ -118,8 +118,8 @@ curl -H 'Accept-Language: en-US' http://localhost:8080/api/v1/estates
 ## 项目命名
 
 - 产品名：`Neighbory`
-- 建议仓库名：`springboot-neighbory`
-- Maven 工程名：`springboot-neighbory`
+- 建议仓库名：`neighbory`
+- Maven 工程名：`neighbory`
 
 ## 后续可扩展（建议作为学习任务）
 

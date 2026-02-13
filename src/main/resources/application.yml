@@ -1,6 +1,6 @@
 spring:
   application:
-    name: springboot-neighbory
+    name: neighbory
   datasource:
     url: jdbc:h2:mem:neighbory;MODE=MySQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
     username: sa

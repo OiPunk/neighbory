@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>io.oipunk</groupId>
-    <artifactId>springboot-neighbory</artifactId>
+    <artifactId>neighbory</artifactId>
     <version>1.0.0</version>
-    <name>springboot-neighbory</name>
+    <name>neighbory</name>
     <description>Spring Boot 3.5 Neighbory learning project</description>
 
     <properties>
