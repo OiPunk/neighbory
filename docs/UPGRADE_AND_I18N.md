@@ -22,8 +22,8 @@
 
 ## 4. 关键文件
 
-- `src/main/java/io/oipunk/propertylab/config/I18nConfig.java`
-- `src/main/java/io/oipunk/propertylab/common/LocaleMessageService.java`
+- `src/main/java/io/oipunk/neighbory/config/I18nConfig.java`
+- `src/main/java/io/oipunk/neighbory/common/LocaleMessageService.java`
 - `src/main/resources/messages_zh_CN.properties`
 - `src/main/resources/messages_en_US.properties`
 

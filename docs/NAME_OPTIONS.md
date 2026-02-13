@@ -1,29 +1,26 @@
-# 项目命名建议
+# 项目命名方案（已定稿）
 
-## 首选
+## 最终采用
 
-- `springboot-property-lab`
+- 产品名：`Neighbory`
+- 建议仓库名：`springboot-neighbory`
+- Maven 工程名：`springboot-neighbory`
 
-理由：
+## 备选名字（10个）
 
-- 直接表达 Spring Boot + 物业领域 + 学习实验室
-- 英文命名简洁，适合作为公开教程仓库
+1. `Neighbory`
+2. `BlockNest`
+3. `HomeGrid`
+4. `TownSquare Ops`
+5. `CivicBlocks`
+6. `ResidentFlow`
+7. `EstatePulse`
+8. `UnitBridge`
+9. `CommunityLoop`
+10. `HouseholdHub`
 
-## 备选
+## 命名原则
 
-- `estate-core-lab`
-- `smart-community-boot`
-- `property-service-bootcamp`
-- `boot-estate-playground`
-- `springboot-estate-lab`
-- `property-domain-lab`
-- `community-ops-lab`
-- `springboot-property-starter-kit`
-- `estate-service-blueprint`
-- `property-platform-playground`
-
-## 命名建议规则
-
-- 优先用领域词（property/estate/community）
-- 避免过长缩写
-- 名称里体现“学习性质”（lab/playground/bootcamp）
+- 产品名偏品牌化，便于传播与记忆
+- 仓库名显式包含 `springboot`，便于技术检索
+- 兼顾学习项目定位与未来扩展为真实产品的可能性

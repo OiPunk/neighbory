@@ -15,7 +15,7 @@
 
 代码位置：
 
-- `src/main/java/io/oipunk/propertylab/agent`
+- `src/main/java/io/oipunk/neighbory/agent`
 
 ## 3. 已包含 Agent
 

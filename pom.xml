@@ -12,10 +12,10 @@
     </parent>
 
     <groupId>io.oipunk</groupId>
-    <artifactId>springboot-property-lab</artifactId>
+    <artifactId>springboot-neighbory</artifactId>
     <version>1.0.0</version>
-    <name>springboot-property-lab</name>
-    <description>Spring Boot 3.5 property management learning project</description>
+    <name>springboot-neighbory</name>
+    <description>Spring Boot 3.5 Neighbory learning project</description>
 
     <properties>
         <java.version>21</java.version>

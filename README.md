@@ -1,6 +1,6 @@
-# SpringBoot Property Lab
+# SpringBoot Neighbory
 
-这是对原 `family-platform` 的现代化重构版，目标是给不会 Spring Boot 的新手提供一条可运行、可理解、可扩展的学习路径。
+`Neighbory` 是一个基于 Spring Boot 的社区物业学习型项目，目标是给不会 Spring Boot 的新手提供一条可运行、可理解、可扩展的学习路径。
 
 > 现状说明：原仓库主代码目录是不可用的子模块引用（`family_service_platform` / `webproject`），公开仓库内缺失对应源码。本项目基于保留的 `family_service_platform.sql` 业务模型进行重建。
 
@@ -47,9 +47,9 @@
 
 ## 项目结构
 
-- `src/main/java/io/oipunk/propertylab`
+- `src/main/java/io/oipunk/neighbory`
 - `src/main/resources`
-- `src/test/java/io/oipunk/propertylab`
+- `src/test/java/io/oipunk/neighbory`
 - `docs`
 
 核心分层：
@@ -115,13 +115,11 @@ curl -H 'Accept-Language: zh-CN' http://localhost:8080/api/v1/estates
 curl -H 'Accept-Language: en-US' http://localhost:8080/api/v1/estates
 ```
 
-## 重命名建议（你可以任选）
+## 项目命名
 
-- `springboot-property-lab`（当前使用，教学语义最清晰）
-- `estate-core-lab`
-- `smart-community-boot`
-- `property-service-bootcamp`
-- `boot-estate-playground`
+- 产品名：`Neighbory`
+- 建议仓库名：`springboot-neighbory`
+- Maven 工程名：`springboot-neighbory`
 
 ## 后续可扩展（建议作为学习任务）
 
@@ -137,6 +135,7 @@ curl -H 'Accept-Language: en-US' http://localhost:8080/api/v1/estates
 - `docs/MULTI_AGENT_EXTENSION.md`
 - `docs/MIDDLEWARE_VERSIONS.md`
 - `docs/NAME_OPTIONS.md`
+- `REPO_INTRODUCE.md`
 
 多 Agent 演示接口：
 
