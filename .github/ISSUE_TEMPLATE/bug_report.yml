@@ -1,0 +1,42 @@
+name: Bug Report
+description: Report a reproducible bug in Neighbory
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈问题。请尽量提供可复现信息。
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 简要描述你遇到的问题
+      placeholder: 在什么场景下出现了什么异常？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 提供可复现步骤
+      placeholder: |
+        1. 启动应用
+        2. 调用某个接口
+        3. 看到错误
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 环境信息
+      description: 例如 OS/JDK 版本
+      placeholder: macOS 14, OpenJDK 21.0.10
+    validations:
+      required: true

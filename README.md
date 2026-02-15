@@ -2,6 +2,9 @@
 
 `Neighbory` 是一个基于 Spring Boot 的社区物业学习型项目，目标是给不会 Spring Boot 的新手提供一条可运行、可理解、可扩展的学习路径。
 
+[![CI](https://github.com/OiPunk/neighbory/actions/workflows/ci.yml/badge.svg)](https://github.com/OiPunk/neighbory/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/OiPunk/neighbory/blob/master/LICENSE)
+
 > 现状说明：原仓库主代码目录是不可用的子模块引用（`family_service_platform` / `webproject`），公开仓库内缺失对应源码。本项目基于保留的 `family_service_platform.sql` 业务模型进行重建。
 
 ## 为什么重构
@@ -74,11 +77,30 @@
 
 ## 快速启动
 
-```bash
-export JAVA_HOME=/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
-export PATH="$JAVA_HOME/bin:$PATH"
+前置要求：
 
+- JDK 21+
+- Git
+- 本仓库已包含 Maven Wrapper（无需本地单独安装 Maven）
+
+检查 Java 版本：
+
+```bash
+java -version
+```
+
+如果输出主版本不是 21，请先切换到 JDK 21 再继续。
+
+macOS / Linux：
+
+```bash
 ./mvnw clean spring-boot:run
+```
+
+Windows (PowerShell)：
+
+```powershell
+.\mvnw.cmd clean spring-boot:run
 ```
 
 访问：
@@ -89,11 +111,16 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 ## 运行测试与覆盖率
 
-```bash
-export JAVA_HOME=/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
-export PATH="$JAVA_HOME/bin:$PATH"
+macOS / Linux：
 
+```bash
 ./mvnw clean verify
+```
+
+Windows (PowerShell)：
+
+```powershell
+.\mvnw.cmd clean verify
 ```
 
 `verify` 阶段会执行 JaCoCo 校验：
@@ -120,6 +147,15 @@ curl -H 'Accept-Language: en-US' http://localhost:8080/api/v1/estates
 - 产品名：`Neighbory`
 - 建议仓库名：`neighbory`
 - Maven 工程名：`neighbory`
+
+## 开源协作
+
+- 贡献指南：`CONTRIBUTING.md`
+- 社区行为准则：`CODE_OF_CONDUCT.md`
+- 安全策略：`SECURITY.md`
+- PR 模板与 Issue 模板：`.github/`
+
+欢迎提交 Issue / PR，一起把这个 Spring Boot 练手项目做成长期可维护的开源模板。
 
 ## 后续可扩展（建议作为学习任务）
 
@@ -148,3 +184,7 @@ curl -H "Accept-Language: zh-CN" -H "Content-Type: application/json" \
   -d "{\"text\":\"我要缴费但是账单不对\"}" \
   http://localhost:8080/api/v1/agents/assist
 ```
+
+## 许可证
+
+本项目基于 `MIT License` 开源，详见 `LICENSE`。
