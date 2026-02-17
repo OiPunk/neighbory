@@ -18,7 +18,6 @@ import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import org.junit.jupiter.api.Test;
 
@@ -65,12 +64,12 @@ class DomainModelObjectTest {
         space.setId(3L);
         space.setCode("P-001");
         space.setOccupied(true);
-        space.setOwnerName("张三");
+        space.setOwnerName("Alex");
 
         assertThat(space.getId()).isEqualTo(3L);
         assertThat(space.getCode()).isEqualTo("P-001");
         assertThat(space.isOccupied()).isTrue();
-        assertThat(space.getOwnerName()).isEqualTo("张三");
+        assertThat(space.getOwnerName()).isEqualTo("Alex");
 
         BillingChargeCreateRequest createRequest = new BillingChargeCreateRequest("E", "U", new BigDecimal("1"), LocalDate.now(), "r");
         BillingChargeResponse chargeResponse = new BillingChargeResponse(1L, "E", "U", new BigDecimal("1"), LocalDate.now(), false, "r");
@@ -88,7 +87,7 @@ class DomainModelObjectTest {
         assertThat(assignRequest.ownerName()).isEqualTo("owner");
         assertThat(parkingResponse.code()).isEqualTo("P");
 
-        AgentContext context = new AgentContext("hello", Locale.US);
+        AgentContext context = new AgentContext("hello");
         AgentResult result = AgentResult.of("agent", "summary", Map.of("k", "v"));
         AssistRequest assistRequest = new AssistRequest("q");
         AssistResponse assistResponse = new AssistResponse(List.of(result));

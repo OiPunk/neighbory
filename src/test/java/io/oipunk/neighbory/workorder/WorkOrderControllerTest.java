@@ -28,13 +28,12 @@ class WorkOrderControllerTest {
 
         String payload = """
                 {
-                  "title": "围栏维修",
-                  "description": "小区北门围栏损坏",
+                  "title": "Fence repair",
+                  "description": "North gate fence is damaged",
                   "priority": "high"
                 }
                 """;
         String created = mockMvc.perform(post("/api/v1/workorders")
-                        .header("Accept-Language", "zh-CN")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(payload))
                 .andExpect(status().isCreated())

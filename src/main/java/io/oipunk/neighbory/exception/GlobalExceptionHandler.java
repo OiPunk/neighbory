@@ -1,6 +1,6 @@
 package io.oipunk.neighbory.exception;
 
-import io.oipunk.neighbory.common.LocaleMessageService;
+import io.oipunk.neighbory.common.MessageService;
 import java.time.Instant;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 /**
  * Unified exception output:
  * - uses the Spring 6 / Boot 3 recommended `ProblemDetail` model
- * - supports localization for both title and detail fields
+ * - centralizes error title/detail generation from shared messages
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    private final LocaleMessageService messageService;
+    private final MessageService messageService;
 
-    public GlobalExceptionHandler(LocaleMessageService messageService) {
+    public GlobalExceptionHandler(MessageService messageService) {
         this.messageService = messageService;
     }
 

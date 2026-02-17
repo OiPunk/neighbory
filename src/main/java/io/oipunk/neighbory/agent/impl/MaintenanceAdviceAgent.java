@@ -3,7 +3,7 @@ package io.oipunk.neighbory.agent.impl;
 import io.oipunk.neighbory.agent.core.Agent;
 import io.oipunk.neighbory.agent.core.AgentContext;
 import io.oipunk.neighbory.agent.core.AgentResult;
-import io.oipunk.neighbory.common.LocaleMessageService;
+import io.oipunk.neighbory.common.MessageService;
 import java.util.Locale;
 import org.springframework.stereotype.Component;
 
@@ -13,9 +13,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class MaintenanceAdviceAgent implements Agent {
 
-    private final LocaleMessageService messageService;
+    private final MessageService messageService;
 
-    public MaintenanceAdviceAgent(LocaleMessageService messageService) {
+    public MaintenanceAdviceAgent(MessageService messageService) {
         this.messageService = messageService;
     }
 
@@ -30,7 +30,7 @@ public class MaintenanceAdviceAgent implements Agent {
             return false;
         }
         String lower = context.text().toLowerCase(Locale.ROOT);
-        return lower.contains("repair") || lower.contains("fix") || lower.contains("报修") || lower.contains("故障");
+        return lower.contains("repair") || lower.contains("fix");
     }
 
     @Override

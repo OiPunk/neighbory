@@ -21,11 +21,10 @@ class AgentControllerTest {
     @Test
     void shouldReturnAgentSteps() throws Exception {
         mockMvc.perform(post("/api/v1/agents/assist")
-                        .header("Accept-Language", "zh-CN")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"text\":\"我要缴费账单不对\"}"))
+                        .content("{\"text\":\"I need help with a wrong billing amount\"}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.message").value("多 Agent 协作建议已生成。"))
+                .andExpect(jsonPath("$.message").value("Multi-agent assistance generated."))
                 .andExpect(jsonPath("$.data.steps.length()").value(2));
     }
 

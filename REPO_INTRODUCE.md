@@ -1,13 +1,13 @@
 # Neighbory - Repository Introduction
 
-`Neighbory` is a beginner-friendly Spring Boot project for property/community operations.
-It is built to help learners move from "it runs" to "it is engineered".
+`Neighbory` is a beginner-friendly Spring Boot project for neighborhood and property operations.
+It helps learners move from "it runs" to "it is engineered".
 
 ## Positioning
 
-- Learning-first: a complete path from basics to deliverable APIs
-- Modern-first: demonstrates current Spring Boot practices
-- Engineering-first: architecture, testing, and documentation quality are treated as first-class concerns
+- Learning-first: complete path from starter APIs to maintainable service code
+- Modern-first: current Spring Boot and Java versions
+- Engineering-first: architecture, tests, and documentation quality are treated as first-class concerns
 
 ## Tech Stack
 
@@ -21,23 +21,23 @@ It is built to help learners move from "it runs" to "it is engineered".
 
 ## Core Modules
 
-- `estate`: estate, building, and unit core model
-- `workorder`: work order creation and status flow
-- `billing`: billing and payment lifecycle
-- `parking`: parking allocation and query
+- `estate`: estate, building, and unit model
+- `workorder`: ticket creation and status flow
+- `billing`: charge creation and payment lifecycle
+- `parking`: parking space assignment and release
 - `agent`: local multi-agent orchestration skeleton
 
 ## Architecture Highlights
 
 - Layered design: `controller -> service -> repository`
 - Unified API protocol: `ApiResponse` + `ProblemDetail`
-- Internationalization: `Accept-Language` + message bundles
+- English-only message resources for consistent responses
 - Observability: health and metrics endpoints
 - Evolvable architecture: from rule-based orchestration to LLM-agent routing
 
 ## Quality Standards
 
-- Unit/integration tests are part of normal development
+- Unit/integration tests are mandatory for behavior changes
 - JaCoCo 100% line coverage quality gate
 - Maven `verify` must pass
 - Runtime health endpoint must return `UP`
@@ -46,7 +46,7 @@ It is built to help learners move from "it runs" to "it is engineered".
 
 - Developers new to Spring Boot
 - Developers moving from demos to production-style engineering habits
-- Learners focusing on API design, testing discipline, i18n, and observability
+- Learners focused on API design, testing discipline, and observability
 
 ## Suggested Learning Path
 

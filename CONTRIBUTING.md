@@ -46,7 +46,7 @@ Conventional Commits are recommended:
 Examples:
 
 - `feat(estate): add estate query by manager id`
-- `fix(i18n): fallback to default locale when header is invalid`
+- `fix(messages): align response text with message keys`
 
 ## Pull Request Checklist
 

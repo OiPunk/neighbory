@@ -3,7 +3,7 @@ package io.oipunk.neighbory.agent.impl;
 import io.oipunk.neighbory.agent.core.Agent;
 import io.oipunk.neighbory.agent.core.AgentContext;
 import io.oipunk.neighbory.agent.core.AgentResult;
-import io.oipunk.neighbory.common.LocaleMessageService;
+import io.oipunk.neighbory.common.MessageService;
 import java.util.Locale;
 import java.util.Map;
 import org.springframework.stereotype.Component;
@@ -17,9 +17,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class KeywordIntentAgent implements Agent {
 
-    private final LocaleMessageService messageService;
+    private final MessageService messageService;
 
-    public KeywordIntentAgent(LocaleMessageService messageService) {
+    public KeywordIntentAgent(MessageService messageService) {
         this.messageService = messageService;
     }
 
@@ -42,10 +42,10 @@ public class KeywordIntentAgent implements Agent {
 
     private String classify(String text) {
         String lower = text.toLowerCase(Locale.ROOT);
-        if (lower.contains("fee") || lower.contains("bill") || lower.contains("欠费") || lower.contains("缴费")) {
+        if (lower.contains("fee") || lower.contains("bill")) {
             return "BILLING";
         }
-        if (lower.contains("repair") || lower.contains("fix") || lower.contains("报修") || lower.contains("故障")) {
+        if (lower.contains("repair") || lower.contains("fix")) {
             return "MAINTENANCE";
         }
         return "GENERAL";

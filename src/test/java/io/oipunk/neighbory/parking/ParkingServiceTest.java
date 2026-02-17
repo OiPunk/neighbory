@@ -42,16 +42,16 @@ class ParkingServiceTest {
         when(parkingSpaceRepository.findById(1L)).thenReturn(Optional.of(space));
         when(parkingSpaceRepository.save(space)).thenReturn(space);
 
-        var response = parkingService.assign(1L, new ParkingAssignRequest("  张三  "));
+        var response = parkingService.assign(1L, new ParkingAssignRequest("  Alex  "));
 
         assertThat(response.occupied()).isTrue();
-        assertThat(response.ownerName()).isEqualTo("张三");
+        assertThat(response.ownerName()).isEqualTo("Alex");
     }
 
     @Test
     void releaseShouldClearOwner() {
         ParkingSpace space = space(1L, true);
-        space.setOwnerName("张三");
+        space.setOwnerName("Alex");
         when(parkingSpaceRepository.findById(1L)).thenReturn(Optional.of(space));
         when(parkingSpaceRepository.save(space)).thenReturn(space);
 

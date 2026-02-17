@@ -21,13 +21,13 @@ class ParkingControllerTest {
 
     @Test
     void shouldListAssignAndRelease() throws Exception {
-        mockMvc.perform(get("/api/v1/parking/spaces").header("Accept-Language", "zh-CN"))
+        mockMvc.perform(get("/api/v1/parking/spaces"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.message").value("车位列表查询成功。"));
+                .andExpect(jsonPath("$.message").value("Parking spaces loaded successfully."));
 
         mockMvc.perform(patch("/api/v1/parking/spaces/2/assign")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"ownerName\":\"李四\"}"))
+                        .content("{\"ownerName\":\"Alex\"}"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.data.occupied").value(true));
 

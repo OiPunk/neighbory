@@ -1,7 +1,7 @@
 package io.oipunk.neighbory.estate.controller;
 
 import io.oipunk.neighbory.common.ApiResponse;
-import io.oipunk.neighbory.common.LocaleMessageService;
+import io.oipunk.neighbory.common.MessageService;
 import io.oipunk.neighbory.estate.dto.EstateCreateRequest;
 import io.oipunk.neighbory.estate.dto.EstateDetailResponse;
 import io.oipunk.neighbory.estate.dto.EstateSummaryResponse;
@@ -28,12 +28,12 @@ public class EstateController {
      * The controller layer is responsible only for:
      * 1. request validation and DTO protocol mapping
      * 2. building a unified response envelope (`ApiResponse`)
-     * 3. returning localized message text
+     * 3. returning consistent response messages
      */
     private final EstateService estateService;
-    private final LocaleMessageService messageService;
+    private final MessageService messageService;
 
-    public EstateController(EstateService estateService, LocaleMessageService messageService) {
+    public EstateController(EstateService estateService, MessageService messageService) {
         this.estateService = estateService;
         this.messageService = messageService;
     }

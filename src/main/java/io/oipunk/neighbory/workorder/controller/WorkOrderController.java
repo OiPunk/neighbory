@@ -1,7 +1,7 @@
 package io.oipunk.neighbory.workorder.controller;
 
 import io.oipunk.neighbory.common.ApiResponse;
-import io.oipunk.neighbory.common.LocaleMessageService;
+import io.oipunk.neighbory.common.MessageService;
 import io.oipunk.neighbory.workorder.dto.WorkOrderCreateRequest;
 import io.oipunk.neighbory.workorder.dto.WorkOrderResponse;
 import io.oipunk.neighbory.workorder.dto.WorkOrderUpdateStatusRequest;
@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class WorkOrderController {
 
     private final WorkOrderService workOrderService;
-    private final LocaleMessageService messageService;
+    private final MessageService messageService;
 
-    public WorkOrderController(WorkOrderService workOrderService, LocaleMessageService messageService) {
+    public WorkOrderController(WorkOrderService workOrderService, MessageService messageService) {
         this.workOrderService = workOrderService;
         this.messageService = messageService;
     }

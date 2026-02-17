@@ -23,9 +23,9 @@ class BillingControllerTest {
 
     @Test
     void shouldListAndCreateAndPayCharge() throws Exception {
-        mockMvc.perform(get("/api/v1/billing/charges").header("Accept-Language", "zh-CN"))
+        mockMvc.perform(get("/api/v1/billing/charges"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.message").value("收费单列表查询成功。"));
+                .andExpect(jsonPath("$.message").value("Billing charges loaded successfully."));
 
         String payload = """
                 {
@@ -33,11 +33,10 @@ class BillingControllerTest {
                   "unitCode": "b1-u9",
                   "amount": 98.20,
                   "dueDate": "2026-03-20",
-                  "remark": "测试收费"
+                  "remark": "test billing"
                 }
                 """;
         String response = mockMvc.perform(post("/api/v1/billing/charges")
-                        .header("Accept-Language", "zh-CN")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(payload))
                 .andExpect(status().isCreated())
@@ -49,8 +48,7 @@ class BillingControllerTest {
         Number idValue = JsonPath.read(response, "$.data.id");
         long id = idValue.longValue();
 
-        mockMvc.perform(patch("/api/v1/billing/charges/{id}/pay", id)
-                        .header("Accept-Language", "zh-CN"))
+        mockMvc.perform(patch("/api/v1/billing/charges/{id}/pay", id))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.data.paid").value(true));
 

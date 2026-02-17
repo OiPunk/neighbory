@@ -2,26 +2,26 @@
 
 ## Supported Versions
 
-当前主要维护分支：
+The actively maintained branch is:
 
-- `master`: 支持
+- `master`
 
-历史分支如无特别声明，默认不再提供安全修复。
+Unless explicitly stated, historical branches are not guaranteed to receive security fixes.
 
 ## Reporting a Vulnerability
 
-如果你发现了安全漏洞，请不要公开提交 Issue。
+Do not disclose vulnerabilities in public issues.
 
-请通过以下方式私下报告：
+Please report privately through one of the following channels:
 
-1. 使用 GitHub Security Advisory（推荐）
-2. 或创建私有沟通渠道后联系维护者
+1. GitHub Security Advisory (recommended)
+2. Direct private contact with maintainers
 
-请尽量包含：
+Please include:
 
-- 漏洞影响范围
-- 复现步骤
-- 可能的利用条件
-- 建议修复方案（可选）
+- affected scope
+- reproduction steps
+- potential exploit conditions
+- suggested mitigation (optional)
 
-我们会在确认后尽快响应并安排修复发布。
+We will acknowledge and triage reports as soon as possible.

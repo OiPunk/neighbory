@@ -1,21 +1,12 @@
 package io.oipunk.neighbory.common;
 
-import io.oipunk.neighbory.config.I18nConfig;
 import java.util.Locale;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.StaticMessageSource;
-import org.springframework.context.i18n.LocaleContextHolder;
-import org.springframework.web.servlet.LocaleResolver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class CommonAndConfigTest {
-
-    @AfterEach
-    void tearDown() {
-        LocaleContextHolder.resetLocaleContext();
-    }
 
     @Test
     void apiResponseFactoryMethodsShouldWork() {
@@ -32,27 +23,12 @@ class CommonAndConfigTest {
     }
 
     @Test
-    void localeMessageServiceShouldUseCurrentLocale() {
+    void messageServiceShouldUseEnglishMessages() {
         StaticMessageSource source = new StaticMessageSource();
-        source.addMessage("hello", Locale.US, "Hello {0}");
-        source.addMessage("hello", Locale.SIMPLIFIED_CHINESE, "你好 {0}");
-        LocaleMessageService service = new LocaleMessageService(source);
+        source.addMessage("hello", Locale.ENGLISH, "Hello {0}");
+        source.addMessage("hello", Locale.FRANCE, "Bonjour {0}");
+        MessageService service = new MessageService(source);
 
-        LocaleContextHolder.setLocale(Locale.US);
         assertThat(service.get("hello", "Tom")).isEqualTo("Hello Tom");
-
-        LocaleContextHolder.setLocale(Locale.SIMPLIFIED_CHINESE);
-        assertThat(service.get("hello", "Tom")).isEqualTo("你好 Tom");
-    }
-
-    @Test
-    void i18nConfigShouldExposeDefaultLocaleAndMessageSource() {
-        I18nConfig config = new I18nConfig();
-
-        LocaleResolver resolver = config.localeResolver();
-        assertThat(resolver).isNotNull();
-
-        var messageSource = config.messageSource();
-        assertThat(messageSource).isNotNull();
     }
 }

@@ -6,7 +6,7 @@ This repository is a Spring Boot learning project focused on:
 
 - clear layered architecture
 - runnable and debuggable implementation
-- practical engineering practices (exception governance, i18n, testing, and documentation)
+- practical engineering practices (exception governance, testing, and documentation)
 
 ## 2. Layering by Domain
 
@@ -16,15 +16,15 @@ This repository is a Spring Boot learning project focused on:
 - Persistence layer: `*/repository`
 - Model layer: `*/entity`, `*/dto`
 - Agent layer: `agent/api`, `agent/core`, `agent/impl`
-- Cross-cutting layer: `exception`, `common`, `config`
+- Cross-cutting layer: `exception`, `common`
 
 ## 3. Data Model (Current Scope)
 
-Mapped from core tables in the original SQL model:
+Mapped from the baseline domain model:
 
-- `fc_estate` -> `estates`
-- `fc_building` -> `buildings`
-- `fc_unit` -> `units`
+- `estates`
+- `buildings`
+- `units`
 - `billing_charges`
 - `work_orders`
 - `parking_spaces`
@@ -43,12 +43,12 @@ Relationships:
 - schema versioning via Flyway (`V1`~`V4`)
 - build consistency via Maven Enforcer + Maven Wrapper (Java 21 / Maven 3.9.x)
 - JaCoCo 100% line coverage as a quality gate
-- a rule-based `Multi-Agent Orchestrator` to demonstrate pluggable collaboration
+- rule-based `Multi-Agent Orchestrator` to demonstrate pluggable collaboration
 
 ## 5. Learning-Oriented Features
 
 1. Unified error model: controllers avoid ad-hoc error shapes and delegate to global handling.
-2. i18n request path: `Accept-Language -> MessageSource -> localized business/validation/error text`.
+2. Centralized response messages via `messages.properties`.
 3. Virtual threads: lightweight request concurrency model for I/O-bound workloads.
 4. Dependency governance: BOM + Enforcer + Wrapper for stable local/CI behavior.
 5. Observability entry points: health and metrics endpoints ready for monitoring.

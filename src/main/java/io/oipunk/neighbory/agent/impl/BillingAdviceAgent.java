@@ -3,7 +3,7 @@ package io.oipunk.neighbory.agent.impl;
 import io.oipunk.neighbory.agent.core.Agent;
 import io.oipunk.neighbory.agent.core.AgentContext;
 import io.oipunk.neighbory.agent.core.AgentResult;
-import io.oipunk.neighbory.common.LocaleMessageService;
+import io.oipunk.neighbory.common.MessageService;
 import java.util.Locale;
 import org.springframework.stereotype.Component;
 
@@ -17,9 +17,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class BillingAdviceAgent implements Agent {
 
-    private final LocaleMessageService messageService;
+    private final MessageService messageService;
 
-    public BillingAdviceAgent(LocaleMessageService messageService) {
+    public BillingAdviceAgent(MessageService messageService) {
         this.messageService = messageService;
     }
 
@@ -34,7 +34,7 @@ public class BillingAdviceAgent implements Agent {
             return false;
         }
         String lower = context.text().toLowerCase(Locale.ROOT);
-        return lower.contains("fee") || lower.contains("bill") || lower.contains("欠费") || lower.contains("缴费");
+        return lower.contains("fee") || lower.contains("bill");
     }
 
     @Override

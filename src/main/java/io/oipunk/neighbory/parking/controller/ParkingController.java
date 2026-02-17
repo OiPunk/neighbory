@@ -1,7 +1,7 @@
 package io.oipunk.neighbory.parking.controller;
 
 import io.oipunk.neighbory.common.ApiResponse;
-import io.oipunk.neighbory.common.LocaleMessageService;
+import io.oipunk.neighbory.common.MessageService;
 import io.oipunk.neighbory.parking.dto.ParkingAssignRequest;
 import io.oipunk.neighbory.parking.dto.ParkingSpaceResponse;
 import io.oipunk.neighbory.parking.service.ParkingService;
@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ParkingController {
 
     private final ParkingService parkingService;
-    private final LocaleMessageService messageService;
+    private final MessageService messageService;
 
-    public ParkingController(ParkingService parkingService, LocaleMessageService messageService) {
+    public ParkingController(ParkingService parkingService, MessageService messageService) {
         this.parkingService = parkingService;
         this.messageService = messageService;
     }

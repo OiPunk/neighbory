@@ -40,9 +40,8 @@ class EstateServiceTest {
 
     @Test
     void listShouldReturnSummary() {
-        EstateSummaryProjection one = summary(1L, "ESTATE-11", "社区11", 2L, 10L);
-        EstateSummaryProjection two = summary(2L, "ESTATE-22", "社区22", 3L, 20L);
-        // Service no longer sorts again; repository query order is authoritative.
+        EstateSummaryProjection one = summary(1L, "ESTATE-11", "Estate 11", 2L, 10L);
+        EstateSummaryProjection two = summary(2L, "ESTATE-22", "Estate 22", 3L, 20L);
         when(estateRepository.findAllSummary()).thenReturn(List.of(one, two));
 
         var result = estateService.list();
@@ -55,12 +54,12 @@ class EstateServiceTest {
 
     @Test
     void detailShouldReturnNestedInfo() {
-        Estate estate = estate(1L, "ESTATE-11", "社区11");
-        Building b1 = building(11L, "B1", "1号楼", estate);
-        Building b2 = building(12L, "B2", "2号楼", estate);
-        Unit u1 = unit(101L, "U1", "1单元", b1);
-        Unit u2 = unit(102L, "U2", "2单元", b1);
-        Unit u3 = unit(103L, "U1", "1单元", b2);
+        Estate estate = estate(1L, "ESTATE-11", "Estate 11");
+        Building b1 = building(11L, "B1", "Building 1", estate);
+        Building b2 = building(12L, "B2", "Building 2", estate);
+        Unit u1 = unit(101L, "U1", "Unit 1", b1);
+        Unit u2 = unit(102L, "U2", "Unit 2", b1);
+        Unit u3 = unit(103L, "U1", "Unit 1", b2);
         b1.setUnits(List.of(u2, u1));
         b2.setUnits(List.of(u3));
         estate.setBuildings(List.of(b2, b1));
@@ -99,7 +98,7 @@ class EstateServiceTest {
             return e;
         });
 
-        var result = estateService.create(new EstateCreateRequest("  estate-99  ", "  社区99  ", " addr ", " remark "));
+        var result = estateService.create(new EstateCreateRequest("  estate-99  ", "  Estate 99  ", " addr ", " remark "));
 
         assertThat(result.id()).isEqualTo(99L);
         assertThat(result.code()).isEqualTo("ESTATE-99");
@@ -127,7 +126,7 @@ class EstateServiceTest {
         assertThat(created.address()).isNull();
         assertThat(created.remark()).isNull();
 
-        Estate existing = estate(101L, "ESTATE-101", "社区101");
+        Estate existing = estate(101L, "ESTATE-101", "Estate 101");
         when(estateRepository.findById(101L)).thenReturn(Optional.of(existing));
         when(estateRepository.save(existing)).thenReturn(existing);
 
@@ -148,19 +147,19 @@ class EstateServiceTest {
 
     @Test
     void updateShouldPersistChanges() {
-        Estate estate = estate(1L, "ESTATE-11", "社区11");
+        Estate estate = estate(1L, "ESTATE-11", "Estate 11");
         when(estateRepository.findById(1L)).thenReturn(Optional.of(estate));
         when(estateRepository.save(estate)).thenReturn(estate);
 
-        var result = estateService.update(1L, new EstateUpdateRequest("新名称", "新地址", "新备注"));
+        var result = estateService.update(1L, new EstateUpdateRequest("New Name", "New Address", "New Remark"));
 
-        assertThat(result.name()).isEqualTo("新名称");
-        assertThat(result.address()).isEqualTo("新地址");
+        assertThat(result.name()).isEqualTo("New Name");
+        assertThat(result.address()).isEqualTo("New Address");
     }
 
     @Test
     void updateShouldHandleNullFields() {
-        Estate estate = estate(2L, "ESTATE-22", "社区22");
+        Estate estate = estate(2L, "ESTATE-22", "Estate 22");
         when(estateRepository.findById(2L)).thenReturn(Optional.of(estate));
         when(estateRepository.save(estate)).thenReturn(estate);
 
@@ -173,7 +172,7 @@ class EstateServiceTest {
 
     @Test
     void deleteShouldRemoveEntity() {
-        Estate estate = estate(1L, "ESTATE-11", "社区11");
+        Estate estate = estate(1L, "ESTATE-11", "Estate 11");
         when(estateRepository.findById(1L)).thenReturn(Optional.of(estate));
 
         estateService.delete(1L);
@@ -199,10 +198,10 @@ class EstateServiceTest {
     }
 
     private EstateSummaryProjection summary(Long id,
-                                           String code,
-                                           String name,
-                                           long buildingCount,
-                                           long unitCount) {
+                                            String code,
+                                            String name,
+                                            long buildingCount,
+                                            long unitCount) {
         return new EstateSummaryProjection() {
             @Override
             public Long getId() {

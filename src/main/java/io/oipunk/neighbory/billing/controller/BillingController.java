@@ -4,7 +4,7 @@ import io.oipunk.neighbory.billing.dto.BillingChargeCreateRequest;
 import io.oipunk.neighbory.billing.dto.BillingChargeResponse;
 import io.oipunk.neighbory.billing.service.BillingService;
 import io.oipunk.neighbory.common.ApiResponse;
-import io.oipunk.neighbory.common.LocaleMessageService;
+import io.oipunk.neighbory.common.MessageService;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -23,9 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class BillingController {
 
     private final BillingService billingService;
-    private final LocaleMessageService messageService;
+    private final MessageService messageService;
 
-    public BillingController(BillingService billingService, LocaleMessageService messageService) {
+    public BillingController(BillingService billingService, MessageService messageService) {
         this.billingService = billingService;
         this.messageService = messageService;
     }
