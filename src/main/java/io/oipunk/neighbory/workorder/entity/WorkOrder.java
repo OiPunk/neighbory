@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 import java.time.Instant;
 
 /**
- * 工单实体。
+ * Work order entity.
  */
 @Entity
 @Table(name = "work_orders")

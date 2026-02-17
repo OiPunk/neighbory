@@ -1,67 +1,71 @@
 # Contributing to Neighbory
 
-感谢你愿意参与 `Neighbory` 的建设。
+Thank you for contributing to `Neighbory`.
 
-## 目标
+## Project Intent
 
-本项目是 Spring Boot 新手练手工程，同时按开源项目标准维护。请确保你的提交满足：
+This project is both:
 
-- 对新手友好（可读、可运行、可解释）
-- 不破坏现有 API 行为（除非明确说明）
-- `./mvnw clean verify` 必须通过
-- 覆盖率门禁（JaCoCo 100% line coverage）不被破坏
+- a beginner-friendly Spring Boot learning codebase
+- an open-source repository maintained with engineering quality standards
 
-## 开发环境
+Please make sure your changes are:
+
+- understandable for beginners
+- behavior-safe unless a breaking change is explicitly documented
+- verified with `./mvnw clean verify` (or `.\\mvnw.cmd clean verify` on Windows)
+- compliant with the JaCoCo quality gate (100% line coverage)
+
+## Development Environment
 
 - JDK 21+
 - Git
-- Maven Wrapper（本仓库内置）
+- Maven Wrapper (already included)
 
-## 提交流程
+## Contribution Workflow
 
-1. Fork 并新建分支（建议：`feat/*`、`fix/*`、`docs/*`）
-2. 编写代码与测试
-3. 本地执行：
+1. Fork and create a branch (`feat/*`, `fix/*`, `docs/*`, etc.)
+2. Implement code and tests
+3. Run local verification:
    - macOS/Linux: `./mvnw clean verify`
    - Windows: `.\\mvnw.cmd clean verify`
-4. 更新相关文档（README / docs）
-5. 发起 Pull Request
+4. Update related documentation (`README` / `docs`)
+5. Open a Pull Request
 
-## Commit 建议
+## Commit Message Convention
 
-建议使用 Conventional Commits：
+Conventional Commits are recommended:
 
-- `feat:` 新功能
-- `fix:` 缺陷修复
-- `docs:` 文档更新
-- `refactor:` 重构
-- `test:` 测试改动
-- `chore:` 构建、依赖、脚手架变更
+- `feat:` new feature
+- `fix:` bug fix
+- `docs:` documentation update
+- `refactor:` refactor without behavior change
+- `test:` test changes
+- `chore:` build/dependency/tooling change
 
-示例：
+Examples:
 
 - `feat(estate): add estate query by manager id`
-- `fix(i18n): fallback to default locale when header invalid`
+- `fix(i18n): fallback to default locale when header is invalid`
 
-## Pull Request 要求
+## Pull Request Checklist
 
-请在 PR 描述中至少包含：
+Include at least:
 
-- 变更目的
-- 主要改动点
-- 测试结果（命令和结果摘要）
-- 是否包含 breaking change
-- 文档是否已同步更新
+- change purpose
+- key implementation points
+- validation commands and result summary
+- breaking change impact (if any)
+- documentation updates (if behavior changed)
 
-## 文档与代码风格
+## Coding and Documentation Style
 
-- 保持分层清晰：`controller -> service -> repository`
-- 避免把业务逻辑写在 Controller
-- 公共行为变更必须补充测试
-- 关键非直观逻辑请加简洁注释
+- Keep layer boundaries clear: `controller -> service -> repository`
+- Avoid putting domain logic in controllers
+- Add tests for behavior changes
+- Add short comments where logic is non-obvious
 
-## 问题反馈
+## Security Reporting
 
-- 功能建议：使用 Feature Request 模板
-- 缺陷反馈：使用 Bug Report 模板
-- 安全问题：请不要公开提交 Issue，参见 `SECURITY.md`
+Do not report vulnerabilities in public issues.
+Please follow `SECURITY.md`.

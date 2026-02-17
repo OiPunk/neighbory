@@ -6,21 +6,21 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: 你要解决的问题
-      description: 当前痛点是什么？
+      label: Problem to Solve
+      description: What pain point are you trying to solve?
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
-      label: 建议方案
-      description: 你期望的实现方式
+      label: Proposed Solution
+      description: What would you like to see implemented?
     validations:
       required: true
   - type: textarea
     id: alternatives
     attributes:
-      label: 备选方案
-      description: 是否考虑过其他实现路径？
+      label: Alternatives Considered
+      description: Any alternative approaches considered?
     validations:
       required: false

@@ -3,7 +3,7 @@ package io.oipunk.neighbory.agent.core;
 import java.util.Map;
 
 /**
- * 单个 Agent 的执行结果。
+ * Execution result produced by a single agent.
  */
 public record AgentResult(String agent, String summary, Map<String, Object> data) {
 

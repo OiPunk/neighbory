@@ -6,37 +6,37 @@ body:
   - type: markdown
     attributes:
       value: |
-        感谢反馈问题。请尽量提供可复现信息。
+        Thanks for reporting. Please provide enough details so the issue can be reproduced.
   - type: textarea
     id: description
     attributes:
-      label: 问题描述
-      description: 简要描述你遇到的问题
-      placeholder: 在什么场景下出现了什么异常？
+      label: Problem Description
+      description: What happened?
+      placeholder: Describe the observed behavior and where it occurs.
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: 复现步骤
-      description: 提供可复现步骤
+      label: Reproduction Steps
+      description: How can we reproduce it?
       placeholder: |
-        1. 启动应用
-        2. 调用某个接口
-        3. 看到错误
+        1. Start the application
+        2. Call endpoint X
+        3. Observe error Y
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: 预期行为
+      label: Expected Behavior
     validations:
       required: true
   - type: input
     id: env
     attributes:
-      label: 环境信息
-      description: 例如 OS/JDK 版本
+      label: Environment
+      description: OS / JDK / runtime details
       placeholder: macOS 14, OpenJDK 21.0.10
     validations:
       required: true

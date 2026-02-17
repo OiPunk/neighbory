@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 /**
- * 车位实体。
+ * Parking space entity.
  */
 @Entity
 @Table(name = "parking_spaces")

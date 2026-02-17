@@ -9,9 +9,10 @@ import java.util.Map;
 import org.springframework.stereotype.Component;
 
 /**
- * 一个最小可跑通的意图识别 Agent（规则版）。
+ * Minimal intent-classification agent (rule-based).
  *
- * 教学点：先用确定性规则完成端到端，再替换成 LLM 分类器。
+ * Learning path: ship an end-to-end deterministic version first,
+ * then replace it with an LLM-based classifier.
  */
 @Component
 public class KeywordIntentAgent implements Agent {

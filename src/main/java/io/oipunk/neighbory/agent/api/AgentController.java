@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 多 Agent 协作演示接口。
+ * Demo API endpoint for multi-agent collaboration.
  *
- * 不依赖外部 LLM，可本地跑通；后续可把实现替换为 Spring AI 的 LLM Agent。
+ * Works locally without external LLM services. The implementation can later be
+ * replaced by Spring AI / LLM-backed agents.
  */
 @RestController
 @RequestMapping("/api/v1/agents")

@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 
 /**
- * 单元实体，对应原始库中的 fc_unit 概念。
+ * Unit entity mapped from the original `fc_unit` concept.
  */
 @Entity
 @Table(

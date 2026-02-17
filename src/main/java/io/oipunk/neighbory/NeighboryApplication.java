@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class NeighboryApplication {
 
     /**
-     * 应用入口。
-     * 教学项目保持最小入口，业务能力在分层包中展开。
+     * Application entry point.
+     * Keep bootstrap minimal; business capabilities live in layered packages.
      */
     public static void main(String[] args) {
         SpringApplication.run(NeighboryApplication.class, args);

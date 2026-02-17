@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 楼宇实体，对应原始库中的 fc_building 概念。
+ * Building entity mapped from the original `fc_building` concept.
  */
 @Entity
 @Table(

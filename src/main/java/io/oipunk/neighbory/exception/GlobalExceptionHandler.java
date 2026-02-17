@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
- * 统一异常出口：
- * - 使用 Spring 6 / Boot 3 推荐的 ProblemDetail 结构
- * - 所有 detail/title 支持国际化
+ * Unified exception output:
+ * - uses the Spring 6 / Boot 3 recommended `ProblemDetail` model
+ * - supports localization for both title and detail fields
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {

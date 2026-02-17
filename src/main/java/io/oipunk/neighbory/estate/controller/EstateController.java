@@ -25,10 +25,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class EstateController {
 
     /**
-     * Controller 层只做：
-     * 1. 入参校验与协议转换（DTO）
-     * 2. 组装统一响应体（ApiResponse）
-     * 3. 国际化 message 输出
+     * The controller layer is responsible only for:
+     * 1. request validation and DTO protocol mapping
+     * 2. building a unified response envelope (`ApiResponse`)
+     * 3. returning localized message text
      */
     private final EstateService estateService;
     private final LocaleMessageService messageService;

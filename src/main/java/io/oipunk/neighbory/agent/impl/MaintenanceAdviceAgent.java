@@ -8,7 +8,7 @@ import java.util.Locale;
 import org.springframework.stereotype.Component;
 
 /**
- * 报修建议 Agent（演示版）。
+ * Maintenance advice agent (demo implementation).
  */
 @Component
 public class MaintenanceAdviceAgent implements Agent {

@@ -1,7 +1,8 @@
 package io.oipunk.neighbory.estate.repository;
 
 /**
- * 楼盘列表聚合查询投影，用于一次 SQL 返回统计字段，避免 N+1 查询。
+ * Projection for estate list aggregate queries.
+ * Returns summary statistics in a single SQL query to avoid N+1 access patterns.
  */
 public interface EstateSummaryProjection {
 

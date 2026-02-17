@@ -8,11 +8,11 @@ import java.util.Locale;
 import org.springframework.stereotype.Component;
 
 /**
- * 账单建议 Agent（演示版）。
+ * Billing advice agent (demo implementation).
  *
- * 当前用规则输出一段建议文本；后续可以：
- * - 读取数据库欠费数据
- * - 接入 LLM 生成解释与话术
+ * It currently returns rule-based guidance text. Future upgrades can:
+ * - read outstanding payment data from storage
+ * - integrate an LLM for richer explanations and wording
  */
 @Component
 public class BillingAdviceAgent implements Agent {

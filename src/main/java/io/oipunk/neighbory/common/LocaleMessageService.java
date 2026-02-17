@@ -6,7 +6,7 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Component;
 
 /**
- * 国际化消息读取门面，屏蔽 MessageSource 细节。
+ * Facade for localized message lookup, hiding `MessageSource` details.
  */
 @Component
 public class LocaleMessageService {

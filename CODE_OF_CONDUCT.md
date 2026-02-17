@@ -2,36 +2,52 @@
 
 ## Our Pledge
 
-我们承诺在本项目与社区中，为每个人提供无骚扰的参与体验。
+We as members, contributors, and maintainers pledge to make participation in our
+community a harassment-free experience for everyone, regardless of age, body
+size, visible or invisible disability, ethnicity, sex characteristics, gender
+identity and expression, level of experience, education, socio-economic status,
+nationality, personal appearance, race, religion, or sexual identity
+and orientation.
+
+We pledge to act and interact in ways that contribute to an open, welcoming,
+diverse, inclusive, and healthy community.
 
 ## Our Standards
 
-积极行为包括：
+Examples of behavior that contributes to a positive environment include:
 
-- 尊重不同观点与经验
-- 接受建设性反馈
-- 关注对社区最有利的决策
-- 对新手保持耐心和友善
+- Demonstrating empathy and kindness toward other people
+- Being respectful of differing opinions, viewpoints, and experiences
+- Giving and gracefully accepting constructive feedback
+- Taking responsibility and apologizing to those affected by our mistakes
+- Focusing on what is best for the overall community
 
-不可接受行为包括：
+Examples of unacceptable behavior include:
 
-- 人身攻击、侮辱、骚扰
-- 歧视性言论
-- 恶意公开他人隐私信息
-- 任何在专业社区中不当的行为
+- The use of sexualized language or imagery, and sexual attention or advances
+- Trolling, insulting or derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information without explicit permission
+- Other conduct that could reasonably be considered inappropriate in a professional setting
 
 ## Enforcement Responsibilities
 
-维护者有责任澄清并执行社区行为标准，并对不当行为采取公平措施。
+Community leaders are responsible for clarifying and enforcing this code of
+conduct and will take appropriate and fair corrective action in response to any
+behavior that they deem inappropriate, threatening, offensive, or harmful.
 
 ## Scope
 
-本准则适用于所有项目空间（Issue、PR、讨论区）及社区代表性发言场景。
+This code of conduct applies within all community spaces and also applies when
+an individual is officially representing the community in public spaces.
 
 ## Enforcement
 
-如遇不当行为，请通过仓库 Issue 联系维护者处理；涉及安全问题请按 `SECURITY.md` 提交。
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by opening an issue to project maintainers. For security concerns,
+follow `SECURITY.md`.
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1.
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org),
+version 2.1.

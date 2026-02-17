@@ -6,11 +6,12 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 /**
- * 多 Agent 编排器：
- * - 选择 supports 的 Agent
- * - 按固定顺序执行
+ * Multi-agent orchestrator:
+ * - select agents where `supports(context)` is true
+ * - execute agents in deterministic order
  *
- * 教学点：先从确定性流程开始，再逐步演进为更复杂的策略（并行、投票、回溯、LLM Router）。
+ * Learning path: start with deterministic orchestration and then evolve toward
+ * advanced strategies (parallel execution, voting, rollback, LLM-based routing).
  */
 @Service
 public class AgentOrchestrator {
@@ -18,7 +19,7 @@ public class AgentOrchestrator {
     private final List<Agent> agents;
 
     public AgentOrchestrator(List<Agent> agents) {
-        // 保证稳定顺序，避免 Bean 注入顺序导致结果波动
+        // Keep execution order stable so results do not vary by bean injection order.
         this.agents = agents.stream().sorted(Comparator.comparing(Agent::name)).toList();
     }
 

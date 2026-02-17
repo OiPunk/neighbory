@@ -1,12 +1,12 @@
-# 项目命名方案（已定稿）
+# Naming Decision
 
-## 最终采用
+## Final Choice
 
-- 产品名：`Neighbory`
-- 建议仓库名：`neighbory`
-- Maven 工程名：`neighbory`
+- Product name: `Neighbory`
+- Repository name: `neighbory`
+- Maven project name: `neighbory`
 
-## 备选名字（10个）
+## Alternative Name Candidates (10)
 
 1. `Neighbory`
 2. `BlockNest`
@@ -19,8 +19,8 @@
 9. `CommunityLoop`
 10. `HouseholdHub`
 
-## 命名原则
+## Naming Principles
 
-- 产品名偏品牌化，便于传播与记忆
-- 仓库名与产品名保持一致，降低认知成本
-- 兼顾学习项目定位与未来扩展为真实产品的可能性
+- Brand-like product name for better recognition
+- Keep repository and product names consistent to reduce cognitive load
+- Support both learning-project positioning and future productization potential

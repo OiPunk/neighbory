@@ -4,7 +4,7 @@ import io.oipunk.neighbory.agent.core.AgentResult;
 import java.util.List;
 
 /**
- * 多 Agent 协作输出。
+ * Multi-agent response payload.
  */
 public record AssistResponse(List<AgentResult> steps) {
 }

@@ -22,7 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class EstateService {
 
     /**
-     * Service 层聚焦领域逻辑，不承载 HTTP 协议细节。
+     * The service layer focuses on domain logic and avoids HTTP protocol details.
      */
     private final EstateRepository estateRepository;
 
@@ -32,7 +32,7 @@ public class EstateService {
 
     @Transactional(readOnly = true)
     public List<EstateSummaryResponse> list() {
-        // 教学点：列表页优先用聚合查询，一次 SQL 返回统计字段，避免 N+1。
+        // Learning point: prefer aggregate queries for list views to avoid N+1 access.
         return estateRepository.findAllSummary().stream()
                 .map(this::toSummary)
                 .toList();
@@ -40,7 +40,7 @@ public class EstateService {
 
     @Transactional(readOnly = true)
     public EstateDetailResponse detail(Long id) {
-        // 教学点：统一抛出领域异常，由全局异常处理器转换为 ProblemDetail。
+        // Learning point: throw domain exceptions consistently and map them to ProblemDetail globally.
         Estate estate = estateRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Estate", id));
         return toDetail(estate);
@@ -50,7 +50,7 @@ public class EstateService {
     public EstateDetailResponse create(EstateCreateRequest request) {
         String normalizedCode = normalizeCode(request.code());
         if (normalizedCode == null) {
-            // code 的空校验由 Bean Validation 负责，这里仅做防御式处理，避免 NPE。
+            // Bean Validation handles blank code checks; this is defensive null handling to avoid NPE.
             throw new BusinessException("error.validation.badRequest", HttpStatus.BAD_REQUEST);
         }
         if (estateRepository.existsByCode(normalizedCode)) {

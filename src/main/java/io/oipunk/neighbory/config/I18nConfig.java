@@ -9,9 +9,9 @@ import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
 /**
- * 国际化基础配置：
- * 1. 使用 Accept-Language 自动协商语言
- * 2. 加载 messages*.properties 资源包
+ * Core i18n configuration:
+ * 1. negotiate locale from `Accept-Language`
+ * 2. load `messages*.properties` resource bundles
  */
 @Configuration
 public class I18nConfig {

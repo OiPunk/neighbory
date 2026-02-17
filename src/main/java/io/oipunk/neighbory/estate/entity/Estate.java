@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 楼盘聚合根，对应原始库中的 fc_estate 主体概念。
+ * Estate aggregate root mapped from the original `fc_estate` concept.
  */
 @Entity
 @Table(

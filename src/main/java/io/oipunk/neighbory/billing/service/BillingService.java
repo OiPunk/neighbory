@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * 账单子域服务。
+ * Billing subdomain service.
  */
 @Service
 public class BillingService {

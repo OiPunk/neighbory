@@ -3,9 +3,10 @@ package io.oipunk.neighbory.agent.core;
 import java.util.Locale;
 
 /**
- * Agent 上下文：承载输入与协作状态。
+ * Agent context carrying user input and collaboration state.
  *
- * 这里保持轻量化，新手更容易理解。更复杂场景可扩展：用户信息、会话、工具、数据库连接等。
+ * Kept intentionally lightweight for learning clarity.
+ * It can be extended with user profile, session state, tools, and data handles.
  */
 public record AgentContext(String text, Locale locale) {
 }

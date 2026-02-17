@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /**
- * 收费单实体。
+ * Billing charge entity.
  */
 @Entity
 @Table(name = "billing_charges")

@@ -3,7 +3,7 @@ package io.oipunk.neighbory.common;
 import java.time.Instant;
 
 /**
- * 统一 API 响应体，便于前端与新手同学快速形成固定响应心智模型。
+ * Unified API response envelope for predictable client-side handling.
  */
 public record ApiResponse<T>(String message, T data, Instant timestamp) {
 

@@ -42,7 +42,7 @@ class EstateServiceTest {
     void listShouldReturnSummary() {
         EstateSummaryProjection one = summary(1L, "ESTATE-11", "社区11", 2L, 10L);
         EstateSummaryProjection two = summary(2L, "ESTATE-22", "社区22", 3L, 20L);
-        // Service 不再额外排序，排序语义由 Repository 查询保证；单测里也按正确顺序返回。
+        // Service no longer sorts again; repository query order is authoritative.
         when(estateRepository.findAllSummary()).thenReturn(List.of(one, two));
 
         var result = estateService.list();
